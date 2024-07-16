@@ -277,7 +277,7 @@
   margin: 147px 24px 0 23px;
 }
 
-.about__column { 
+.about__column {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,7 +295,7 @@
   background-color: #000;
 }
 
-.about__logo-image { 
+.about__logo-image {
   width: 150px;
   height: 114px;
 }
