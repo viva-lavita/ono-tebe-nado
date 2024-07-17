@@ -44,27 +44,25 @@
   list-style: none;
 }
 
-.header__logo {
+.header__logo-image {
   display: flex;
   grid-area: header__logo;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-}
-
-.header__logo-image {
+  justify-self: center;
+  align-self: center;
   width: 136px;
   height: 111px;
 }
 
 .header__contacts {
+  grid-area: header__contacts;
+  padding-left: 156px;
+}
+
+.contacts {
   display: flex;
   flex-direction: column;
-  grid-area: header__contacts;
   justify-content: start;
   align-items: start;
-  gap: 0px;
-  padding-left: 156px;
   font-style: normal;
   line-height: 24.3px;
 }
@@ -76,21 +74,18 @@
 
 .cover {
   position: relative;
-  z-index: -1;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 757px;
+  min-height: 757px;
   font-weight: 700;
-  background-image: url(../images/cover.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: url(../images/cover.jpg) no-repeat center / cover;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  z-index: -1;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -98,14 +93,15 @@
 
 .cover__title {
   width: 100%;
-  height: 527px;
-  padding: 163px 0 0 50px;
+  min-height: 527px;
+  padding: 163px 80px 0 50px;
   color: #fff;
   font-size: 100px;
   line-height: 115px;
   letter-spacing: 0.3em;
   text-align: center;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .aligned-text {
@@ -118,31 +114,26 @@
 }
 
 .aligned-text_center {
-  padding: 12px 80px 0 0;
+  padding-top: 12px;
   text-align: center;
 }
 
 .aligned-text_right {
-  align-self: end;
-  padding: 5px 20px 0 0;
+  padding: 5px 0 0 583px;
   text-align: right;
 }
 
 .cover__description {
-  position: absolute;
-  bottom: 54px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   width: 100%;
-  padding: 0 51px 0 77px;
-  padding-right: 51px;
-  padding-left: 79px;
+  padding: 125px 51px 0 77px;
   color: #fff;
   font-size: 22px;
   line-height: 28px;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .cover__description-text {
@@ -192,7 +183,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 25px;
-  padding-left: 0px;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -212,7 +203,6 @@
 
 .card {
   position: relative;
-  z-index: -1;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -241,16 +231,14 @@
   line-height: 26px;
   text-decoration: underline;
   text-transform: uppercase;
+  z-index: 1;
 }
 
 .card__text {
   margin: auto 40px 48px 39px;
   font-weight: 400;
   line-height: 24px;
-}
-
-.card__text span {
-  padding-left: 8px;
+  z-index: 1;
 }
 
 .lots__look-more-link {
@@ -268,13 +256,13 @@
 .about {
   display: grid;
   grid-template-columns: 334px 693px;
-  grid-template-rows: 275px auto;
+  grid-template-rows: auto;
   grid-template-areas:
     "about__logo about__text-container"
     ". about__text-container";
   place-items: center;
   column-gap: 25px;
-  margin: 147px 24px 0 23px;
+  margin: 150px 24px 0 23px;
 }
 
 .about__column {
@@ -303,7 +291,7 @@
 .about__text-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 200px auto;
+  grid-template-rows: auto;
   grid-template-areas: 
     "about__title"
     "about__text";
@@ -313,7 +301,7 @@
 
 .about__title {
   grid-area: about__title;
-  padding-top: 52px;
+  padding: 102px 0 50px 0;
   font-weight: 700;
   font-size: 40px;
   line-height: 46.96px;
@@ -346,20 +334,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 180px 50px 88px 50px;
-  margin-bottom: 40px;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
-}
-
-.footer_contacts {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 0px;
-  font-style: normal;
-  line-height: 24.3px;
 }
 
 .footer_contacts_link {
