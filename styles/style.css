@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-areas: 
-  "header__menu header__menu header__logo header__contacts header__contacts";
+  "header__menu header__menu header__logo header__address header__address";
   justify-content: space-between;
   align-items: center;
   margin: 92px 24px;
@@ -53,12 +53,12 @@
   height: 111px;
 }
 
-.header__contacts {
-  grid-area: header__contacts;
+.header__address-position {
+  grid-area: header__address;
   padding-left: 156px;
 }
 
-.contacts {
+.address {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -67,7 +67,7 @@
   line-height: 24.3px;
 }
 
-.header__contacts_link {
+.address_link {
   text-decoration: underline;
   text-underline-offset: 0.2em;
 }
@@ -110,11 +110,11 @@
 }
 
 .letter-spacing-extended {
-  padding-left: 30px;
+  letter-spacing: 57px;
 }
 
 .aligned-text_center {
-  padding-top: 12px;
+  padding: 12px 0 0 25px;
   text-align: center;
 }
 
@@ -314,7 +314,7 @@
   grid-area: about__text;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 22px;
   align-self: center;
   padding-top: 49px;
   letter-spacing: 0.007em;
@@ -337,11 +337,6 @@
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
-}
-
-.footer_contacts_link {
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
 }
 
 .footer__menu {
